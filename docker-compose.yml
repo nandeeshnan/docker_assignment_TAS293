@@ -14,7 +14,7 @@ services:
       - discovery.type=single-node
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
       - ELASTIC_USERNAME=elastic
-      - ELASTIC_PASSWORD=changeme%
+      - ELASTIC_PASSWORD=elastic_passwd
     ports:
       - "9200:9200"
     volumes:
@@ -28,7 +28,7 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
       - ELASTICSEARCH_USERNAME=elastic
-      - ELASTICSEARCH_PASSWORD=changeme%
+      - ELASTICSEARCH_PASSWORD=filebeat_passwd
     depends_on:
       - elasticsearch
 
